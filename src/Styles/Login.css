@@ -1,0 +1,81 @@
+.container-main{
+    display: flex;
+}
+
+.container-text {
+    position: relative;
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 40vw;
+    height: 96vh;
+    background-image: url('../assets/imgPareja.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    border-radius: 50px;
+  }
+
+p{
+    position: absolute;
+    bottom: 0; 
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+
+}
+
+.container-form{
+    margin: 150px;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.btn-goo{
+    border:solid 2px;
+    width: 11rem;
+    height: 2rem;
+    border-radius: 5px;
+    border-color: #35155D;
+    margin-right:20px ;
+    background-color: #fff;
+}
+
+.btn-face{
+    border:solid 2px;
+    width: 11rem;
+    height: 2rem;
+    border-radius: 5px;
+    border-color: #35155D;
+    background-color: #fff;
+}
+
+.btn-goo:hover {
+    background-color: #fce8e6;
+}
+   
+.btn-face:hover {
+    background-color: #e9ebee;
+}
+  
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.icon {
+    margin-right: 8px; 
+    width: 20px; 
+    height: 20px;
+}
