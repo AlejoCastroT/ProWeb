@@ -1,0 +1,15 @@
+.main{
+    width: auto;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10rem;
+}
+
+@media (max-width: 768px){
+    .main{
+        font-size: 5rem;
+    }
+}

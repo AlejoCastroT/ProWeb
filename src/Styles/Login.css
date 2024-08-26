@@ -1,32 +1,40 @@
 .container-main{
     display: flex;
+    margin-left: 80px;
+    margin-right: 50px;
 }
 
 .container-text {
     position: relative;
-    margin-left: 60px;
-    margin-top: 20px;
+    margin-left: 80px;
+    margin-top: 50px;
     width: 40vw;
-    height: 96vh;
-    background-image: url('../assets/imgPareja.jpg'); 
+    height: 90vh;
+    background-color: #433260; 
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat; 
-    border-radius: 50px;
-  }
+    border-radius: 10px;
+}
 
 p{
     position: absolute;
     bottom: 0; 
     padding: 20px;
     margin: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
 
 }
 
-.container-form{
-    margin: 150px;
+.container-title{
+    margin-top: 15rem;
+    margin-left: 20rem;
+}
+
+.container-title, h1{
+    font-weight: 100;
+    margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
 .buttons {
@@ -36,22 +44,38 @@ p{
 }
 
 .btn-goo{
-    border:solid 2px;
+    border:solid 1px;
     width: 11rem;
     height: 2rem;
     border-radius: 5px;
     border-color: #35155D;
     margin-right:20px ;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn-face{
-    border:solid 2px;
+    border:solid 1px;
     width: 11rem;
     height: 2rem;
     border-radius: 5px;
     border-color: #35155D;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn-goo:hover {
@@ -62,20 +86,122 @@ p{
     background-color: #e9ebee;
 }
   
-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-  
 .icon {
     margin-right: 8px; 
     width: 20px; 
     height: 20px;
 }
+
+.container-line{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem
+}
+
+.container-line, h6{
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.line1{
+    border: solid 0.1px;
+    width: 5rem;
+}
+
+.line2{
+    border: solid 0.1px;
+    width: 5rem;
+}
+
+.container-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+.gmail{
+    height: 35px;
+    border-radius: 5px;
+    border: solid 1px #35155D;
+    padding-left: 5px;
+}
+
+.pass{
+    height: 35px;
+    border-radius: 5px;
+    border: solid 1px #35155D;
+    padding-left: 5px;
+}
+
+.remember{
+    font-size: 15px;
+}
+
+.remember-me{
+    margin-right: 5px;
+}
+.forgot{
+    font-size: 14px;
+    text-decoration: none;
+    color: grey;
+}
+
+.btn-login{
+    padding: 7px;
+    text-decoration: none;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: #35155D;
+    color: #fff;
+    font-size: 1rem;
+}
+.container-remember{
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .container-text{
+        display: none;
+    }
+    
+    .container-title{
+        padding-top: 5rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .container-title h1{
+        font-weight: 100;
+        margin-bottom: 1rem;
+        font-size: 30px;
+    }
+
+    .buttons{
+        justify-content: center;
+    }
+
+    .btn-goo, .btn-face{
+        width: 9rem;
+    }
+
+    .line1, .line2{
+        border: solid 0.1px;
+        width: 4rem;
+    }
+
+    .container-main{
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+
+
+
+
