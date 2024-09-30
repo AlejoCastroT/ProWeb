@@ -3,6 +3,8 @@
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
+    margin-right: 10rem;
+    margin-left: 10rem;
     align-items: center;
     position: relative;
 }
@@ -68,29 +70,12 @@ ul {
 
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 60px; 
-        left: 0;
-        right: 0;
-        background: white;
-        flex-direction: column;
-        gap: 0;
-        padding: 1rem;
-        z-index: 10;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+    .nav{
+        justify-content: center;
 
-    .nav-links.open {
-        display: flex;
     }
-
     .but {
         display: none;
     }
 
-    .menu-toggle {
-        display: block;
-    }
 }
