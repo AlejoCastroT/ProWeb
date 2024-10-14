@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/Index.css';
 import Nav from '../components/Nav/Nav';
+import HoverEffect from "../components/HoverEffect"; 
+
 
 function Index() {
   return (
@@ -11,7 +13,8 @@ function Index() {
         <div className='main'>
           Encuentra a alguien que no solo complemente tus sueños, sino que también los impulse a volar juntos.
         </div>
-        <div className='arrow-container'>
+        <HoverEffect />
+          <div className='arrow-container'>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="arrow"
