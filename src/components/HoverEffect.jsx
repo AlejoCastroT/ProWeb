@@ -2,6 +2,18 @@ import React from 'react';
 import "../styles/HoverEffects.css"; 
 
 const HoverEffect = () => {
+  
+  const textos = [
+    "disfruta de la vida",
+    "conoce el mundo",
+    "aprende de los demas",
+    "disfruta del aprendizaje",
+    "comparte tus ideas",
+    "demuestra tu talento",
+    "descubre personalidades",
+    "diviertete en el proceso"
+  ];
+
   return (
     <header>
       <div className="container">
@@ -9,7 +21,7 @@ const HoverEffect = () => {
         <p>CSS & bits of JS</p>
         <div className="container">
           <ul>
-            {Array.from({ length: 12 }, (_, index) => (
+            {textos.map((texto, index) => (
               <li key={index}>
                 <a href="#" className="normal">
                   <svg viewBox="0 0 80 76" x="0px" y="0px">
@@ -18,7 +30,7 @@ const HoverEffect = () => {
                     </g>
                   </svg>
                   <div className="info">
-                    <h3>Single-origin coffee whatever</h3>
+                    <h3>{texto}</h3>
                   </div>
                 </a>
               </li>
@@ -31,3 +43,7 @@ const HoverEffect = () => {
 };
 
 export default HoverEffect;
+
+
+
+//https://codepen.io/noeldelgado/pen/nweYMz
