@@ -90,7 +90,7 @@ p {
     width: 5rem;
 }
 
-/* Fondo semitransparente para el formulario */
+
 .container-form {
     display: flex;
     flex-direction: column;
@@ -98,8 +98,8 @@ p {
     margin-top: 2rem;
     text-align: center;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
-    border-radius: 10px; /* Bordes redondeados */
+    background-color: rgba(105, 55, 155, 0.2); 
+    border-radius: 10px; 
 }
 
 .input {

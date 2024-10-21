@@ -1,0 +1,21 @@
+.user-page {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .user-page img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .user-page h1 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .user-page p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  

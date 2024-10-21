@@ -3,11 +3,14 @@
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
-    margin-right: 10rem;
-    margin-left: 10rem;
     align-items: center;
     position: relative;
+    z-index: 1;
+    background-color: rgba(105, 55, 155, 0.2); 
+    width: 100%; 
+    box-sizing: border-box; 
 }
+
 
 .logo {
     height: 40px;
@@ -63,7 +66,7 @@ ul {
     color: #000;
 }
 
-.btn-log, .btn-reg:hover {
+.btn-log:hover, .btn-reg:hover {
     background-color: #35155D;
     color: #fff;
 }

@@ -3,6 +3,7 @@ import LoginMain from './pages/LoginMain'
 import Index from './pages/Index'
 import Register from './pages/Register'
 import Main from './pages/Main'
+import UserPage from './pages/UserPage'
 
 
 function App() {
@@ -10,8 +11,9 @@ function App() {
     <Routes>
       <Route path="/" element={<Index />} />  
       <Route path="/Login" element={<LoginMain />} />  
-      <Route path='/register' element={<Register/>}/>
-      <Route path='/main' element={<Main/>}/>
+      <Route path='/Register' element={<Register/>}/>
+      <Route path='/Main' element={<Main/>}/>
+      <Route path='/User' element={<UserPage/>} />
     </Routes>
   )
 }

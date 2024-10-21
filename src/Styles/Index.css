@@ -28,6 +28,8 @@
     border-radius: 5px;
     color: #000;
     margin-bottom: 20px;
+    z-index: 1;
+    pointer-events: auto;
 }
 
 .btn-ingre:hover {
