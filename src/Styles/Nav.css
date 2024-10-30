@@ -3,14 +3,11 @@
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
+    margin-right: 10rem;
+    margin-left: 10rem;
     align-items: center;
     position: relative;
-    z-index: 1;
-    background-color: rgba(105, 55, 155, 0.2); 
-    width: 100%; 
-    box-sizing: border-box; 
 }
-
 
 .logo {
     height: 40px;
@@ -37,11 +34,11 @@
 }
 
 ul {
-    list-style: none; 
+    list-style: none;
 }
 
 .nav-links .link {
-    text-decoration: none; 
+    text-decoration: none;
     color: inherit;
 }
 
@@ -57,7 +54,8 @@ ul {
     margin-top: 0;
 }
 
-.btn-log, .btn-reg {
+.btn-log,
+.btn-reg {
     text-decoration: none;
     border: solid 1px #35155D;
     width: 6rem;
@@ -66,17 +64,19 @@ ul {
     color: #000;
 }
 
-.btn-log:hover, .btn-reg:hover {
+.btn-log,
+.btn-reg:hover {
     background-color: #35155D;
     color: #fff;
 }
 
 
 @media (max-width: 768px) {
-    .nav{
+    .nav {
         justify-content: center;
 
     }
+
     .but {
         display: none;
     }

@@ -23,6 +23,7 @@ p {
     padding: 20px;
     margin: 20px;
     color: #fff;
+
 }
 
 .container-title {
@@ -30,7 +31,8 @@ p {
     margin-left: 20rem;
 }
 
-.container-title, h1 {
+.container-title,
+h1 {
     font-weight: 100;
     margin-bottom: 1rem;
     font-size: 2rem;
@@ -42,7 +44,25 @@ p {
     margin-top: 20px;
 }
 
-.btn-goo, .btn-face {
+.btn-goo {
+    border: solid 1px;
+    width: 11rem;
+    height: 2rem;
+    border-radius: 5px;
+    border-color: #35155D;
+    margin-right: 20px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-face {
     border: solid 1px;
     width: 11rem;
     height: 2rem;
@@ -53,6 +73,7 @@ p {
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -77,19 +98,24 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1rem
 }
 
-.container-line, h6 {
+.container-line,
+h6 {
     font-weight: 100;
     font-size: 1rem;
 }
 
-.line1, .line2 {
+.line1 {
     border: solid 0.1px;
     width: 5rem;
 }
 
+.line2 {
+    border: solid 0.1px;
+    width: 5rem;
+}
 
 .container-form {
     display: flex;
@@ -97,9 +123,6 @@ p {
     gap: 1.5rem;
     margin-top: 2rem;
     text-align: center;
-    padding: 20px;
-    background-color: rgba(105, 55, 155, 0.2); 
-    border-radius: 10px; 
 }
 
 .input {
@@ -140,7 +163,6 @@ p {
     justify-content: space-between;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .container-text {
         display: none;
@@ -162,11 +184,13 @@ p {
         justify-content: center;
     }
 
-    .btn-goo, .btn-face {
+    .btn-goo,
+    .btn-face {
         width: 9rem;
     }
 
-    .line1, .line2 {
+    .line1,
+    .line2 {
         border: solid 0.1px;
         width: 4rem;
     }
@@ -176,6 +200,3 @@ p {
         margin: 0;
     }
 }
-@import url('https://fonts.googleapis.com/css?family=Raleway:300');
-
-
