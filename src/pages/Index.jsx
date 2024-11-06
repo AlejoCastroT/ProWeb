@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/Index.css";
 import Nav from "../components/Nav/Nav";
-import LoveImage from "../assets/Love.png"; // Importa la imagen
+import LoveImage from "../assets/Love.png";
 
 function Index() {
   return (
@@ -18,22 +18,21 @@ function Index() {
             también los impulse a volar juntos.
           </h1>
           <Link to="/login" className="btn-ingre">
-            Ingresa
+            <span>Ingresa</span>
           </Link>
         </div>
-
-        <div className="grid-container">
-          <div className="grid-item" style={{ backgroundColor: "#f28b82" }}>
-            Contenido 1
-          </div>
-          <div className="grid-item" style={{ backgroundColor: "#fbbc04" }}>
-            Contenido 2
-          </div>
-          <div className="grid-item" style={{ backgroundColor: "#34a853" }}>
-            Contenido 3
-          </div>
-        </div>
       </section>
+      <div className="grid-container">
+        <div className="grid-item" style={{ backgroundColor: "#f28b82" }}>
+          Contenido 1
+        </div>
+        <div className="grid-item" style={{ backgroundColor: "#fbbc04" }}>
+          Contenido 2
+        </div>
+        <div className="grid-item" style={{ backgroundColor: "#34a853" }}>
+          Contenido 3
+        </div>
+      </div>
     </>
   );
 }

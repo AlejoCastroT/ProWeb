@@ -1,18 +1,25 @@
+/* Navbar principal */
 .nav {
     display: flex;
     justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-right: 10rem;
-    margin-left: 10rem;
     align-items: center;
-    position: relative;
+    padding: 1vh 5vw;
+    /* Margen dinámico de acuerdo al tamaño de la ventana */
+    background-color: #ffcdd2;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra para división */
+    border-bottom: 2px solid #ff4081;
+    /* Línea divisoria en la parte inferior */
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    height: 40px;
+    height: 5vh;
+    cursor: pointer;
 }
-
 
 .menu-toggle {
     display: none;
@@ -22,63 +29,71 @@
 }
 
 .menu-toggle svg {
-    width: 24px;
-    height: 24px;
-    color: #35155D;
+    width: 3vw;
+    height: 3vw;
+    color: #ff4081;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2vw;
     align-items: center;
+}
+
+.nav-links .link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links .link:hover {
+    color: #ff4081;
 }
 
 ul {
     list-style: none;
 }
 
-.nav-links .link {
-    text-decoration: none;
-    color: inherit;
-}
-
-.nav-links .link:hover {
-    text-decoration: underline;
-}
-
 .but {
     display: flex;
-    gap: 1rem;
+    gap: 1.5vw;
     align-items: center;
-    text-align: center;
-    margin-top: 0;
 }
 
 .btn-log,
 .btn-reg {
     text-decoration: none;
-    border: solid 1px #35155D;
-    width: 6rem;
-    padding: 5px;
-    border-radius: 5px;
-    color: #000;
-}
-
-.btn-log,
-.btn-reg:hover {
-    background-color: #35155D;
+    padding: 1vh 2vw;
+    /* Margen y padding dinámicos */
+    border: solid 2px #ff4081;
+    border-radius: 50px;
     color: #fff;
+    font-weight: bold;
+    background-color: transparent;
+    transition: all 0.3s ease;
 }
 
+.btn-log:hover,
+.btn-reg:hover {
+    background-color: #ff4081;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px rgba(255, 64, 129, 0.4);
+}
 
 @media (max-width: 768px) {
     .nav {
-        justify-content: center;
-
+        padding: 1vh 4vw;
     }
 
+    .nav-links,
     .but {
         display: none;
     }
 
+    .menu-toggle {
+        display: block;
+    }
 }
