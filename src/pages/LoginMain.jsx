@@ -1,35 +1,96 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Logo from '../../src/assets/logo.png'
-import '../../src/Styles/Login.css'
-import CardImg from '../components/CardImg'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import Logo from '../../src/assets/logo.png';
+import '../../src/Styles/Login.css';
+import CardImg from '../components/CardImg';
+import Swal from 'sweetalert2'; 
 
 function Login() {
+  const [email, setIEmail] = useState(''); 
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault(); 
+
+    const userData = { email, password };
+
+    // Realiza la solicitud al servidor aquí
+    fetch('http://localhost:5000/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json(); // Convierte a JSON si la respuesta es correcta
+        }
+        throw new Error('Login failed'); 
+      })
+      .then((data) => {
+        console.log('Login successful:', data);
+        // Aquí podrías almacenar el token en localStorage o en el estado global
+        localStorage.setItem('token', data.token); // Si tu API devuelve un token
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Inicio de sesión exitoso',
+          text: '¡Has iniciado sesión correctamente!',
+        });
+
+        navigate('/main'); 
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Error al iniciar sesión. Verifica tus credenciales.', 
+        });
+      });
+  };
+
   return (
     <>
       <div className="container-main">
-        <CardImg/>
+        <CardImg />
         <div className="container-title">
-          <img src={Logo} alt="logo" className='logo'/>
+          <img src={Logo} alt="logo" className='logo' />
           <h1>Log in to your Account</h1>
-          <h6>continue with email:</h6>
-          <div className="container-form">
-            <input type="text" placeholder='Gmail or Username' className='input'/>
-            <input type="password" placeholder='Password' className='input'/>
+          <h6>Continue with email:</h6>
+          <form className="container-form" onSubmit={handleLogin}>
+            <input
+              type="email" 
+              placeholder='Gmail'
+              className='input'
+              value={email}
+              onChange={(e) => setIEmail(e.target.value)} 
+              required 
+            />
+            <input
+              type="password"
+              placeholder='Password'
+              className='input'
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
             <div className="container-remember">
-            <label className='remember' >
-              <input type="checkbox" className="remember-me" name="remember-me"/>
-                Rememeber me 
-            </label>
-              <Link rel="stylesheet" href="" className='forgot'>Forgot your password?</Link>
+              <label className='remember'>
+                <input type="checkbox" className="remember-me" name="remember-me" />
+                Remember me
+              </label>
+              <Link className='forgot'>Forgot your password?</Link>
             </div>
-            <Link className='btn-login'>Log in</Link>
-            <Link rel="stylesheet" to='/register' className='forgot'>Don’t have account? Create an account</Link>
-          </div>
+            <button type="submit" className='btn-login'>Log in</button>
+            <Link to='/register' className='forgot'>Don’t have an account? Create an account</Link>
+          </form>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Login
+export default Login;

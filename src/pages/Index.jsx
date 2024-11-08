@@ -5,12 +5,14 @@ import Nav from '../components/Nav/Nav';
 
 function Index() {
   return (
-    <>
+    <div className='index'>
       <Nav />
       <section className='section-index'>
         <div className='main'>
-          Encuentra a alguien que no solo complemente tus sueños, sino que también los impulse a volar juntos.
+            Encuentra a alguien que no solo complemente tus sueños, sino que también los impulse a volar juntos.
+
         </div>
+        
         <div className='arrow-container'>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,10 +25,10 @@ function Index() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </div>
+        
         <Link to='/login' className='btn-ingre'>Ingresa</Link>
-
       </section>
-    </>
+    </div>
   );
 }
 
