@@ -7,18 +7,16 @@ body {
   height: 100vh;
 }
 
-
 .section-index {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 80vh;
-  background-size: cover;
-  background-position: center;
+  height: 100vh;
   color: #fff;
   position: relative;
+  background: url("../assets/Love.png") center/cover no-repeat;
 }
 
 .overlay {
@@ -29,15 +27,18 @@ body {
   text-align: center;
   padding: 20px;
   width: 100%;
-  height: 100%;
+  height: 50%;
 }
 
 .main-text {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem; /* Tamaño de fuente por defecto */
   max-width: 80%;
   color: black;
+  margin: 0 auto;
+  text-align: center; /* Centra el texto */
 }
+
 
 .btn-ingre {
   background: linear-gradient(45deg, #ff8a8a, #ff4081);
@@ -49,13 +50,13 @@ body {
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; 
   position: relative;
   overflow: hidden;
   box-shadow: 0px 4px 15px rgba(255, 64, 129, 0.4);
   margin-bottom: 150px;
+  animation: pulsate 1.5s ease-in-out infinite;
 }
-
 
 .btn-ingre::before {
   content: "";
@@ -82,7 +83,6 @@ body {
 
 }
 
-
 .btn-ingre span {
   position: relative;
   z-index: 1;
@@ -107,4 +107,41 @@ body {
   color: #fff;
   font-size: 1.2rem;
   border-radius: 8px;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1400px) {
+  .section-index{
+    background: none;
+    background-color: #ffffff;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .main-text {
+    font-size: 3rem; 
+    max-width: 50%;
+    text-align: center;
+    margin-top: -15rem;
+  }
+
+  .overlay{
+    height: 15rem;
+  }
+
+  .btn-ingre{
+    margin-left: 1.5rem;
+  }
 }

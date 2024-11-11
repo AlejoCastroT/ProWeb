@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../src/assets/logo.png";
+import Logo from "../../src/assets/Component 2.png";
 import "../../src/Styles/Login.css";
 import CardImg from "../components/CardImg";
 

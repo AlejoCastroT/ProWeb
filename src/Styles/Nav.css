@@ -1,15 +1,10 @@
-/* Navbar principal */
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1vh 5vw;
-    /* Margen dinámico de acuerdo al tamaño de la ventana */
     background-color: #ffcdd2;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    /* Sombra para división */
-    border-bottom: 2px solid #ff4081;
-    /* Línea divisoria en la parte inferior */
+    box-shadow: 0px 2px 4px rgba(23, 23, 23, 0.16);
     width: 100%;
     position: sticky;
     top: 0;
@@ -17,43 +12,8 @@
 }
 
 .logo {
-    height: 5vh;
+    height: 3.5vh;
     cursor: pointer;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.menu-toggle svg {
-    width: 3vw;
-    height: 3vw;
-    color: #ff4081;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2vw;
-    align-items: center;
-}
-
-.nav-links .link {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links .link:hover {
-    color: #ff4081;
-}
-
-ul {
-    list-style: none;
 }
 
 .but {
@@ -66,10 +26,9 @@ ul {
 .btn-reg {
     text-decoration: none;
     padding: 1vh 2vw;
-    /* Margen y padding dinámicos */
     border: solid 2px #ff4081;
     border-radius: 50px;
-    color: #fff;
+    color: #ff4081;
     font-weight: bold;
     background-color: transparent;
     transition: all 0.3s ease;
@@ -88,12 +47,11 @@ ul {
         padding: 1vh 4vw;
     }
 
-    .nav-links,
-    .but {
+    .btn-reg {
         display: none;
     }
 
-    .menu-toggle {
-        display: block;
+    .btn-log{
+        padding: 1vh 5vw;
     }
 }
