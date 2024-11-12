@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/Main.css";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 const data = [
   {
@@ -23,45 +24,47 @@ const data = [
 ];
 
 function Main() {
-  const [cards, setCards] = useState(data);
+  const [cards, setCards] = useState(data); // Todos los datos de las tarjetas
+  const [cardIndex, setCardIndex] = useState(0); // Índice de la tarjeta actual visible
 
-  const handleSwipe = (id, direction) => {
-    setCards(cards.filter((card) => card.id !== id));
-    console.log(`Tarjeta deslizada a la ${direction} con id: ${id}`);
+  const handleSwipe = (direction) => {
+    // Mueve al siguiente índice, si no hay más tarjetas, reinicia
+    if (cardIndex < cards.length - 1) {
+      setCardIndex(cardIndex + 1);
+    } else {
+      setCardIndex(0); // Si llegamos al final, reiniciamos las tarjetas
+    }
+    console.log(`Tarjeta deslizada a la ${direction}`);
   };
 
   return (
-    <div className="main-container">
-      {cards.map((card, index) => (
-        <div
-          key={card.id}
-          className="card"
-          style={{ zIndex: cards.length - index }}
-        >
-          <img src={card.image} alt={card.name} className="card-image" />
-          <div className="card-info">
-            <h2>
-              {card.name}, {card.age}
-            </h2>
+    <section className="main-container">
+      <Sidebar />
+      <div className="card-container">
+        {cards.length > 0 && (
+          <div className="card">
+            <img className="card-image" src={cards[cardIndex].image} alt={cards[cardIndex].name} />
+            <div className="card-info">
+              <h2>{cards[cardIndex].name}, {cards[cardIndex].age}</h2>
+            </div>
+            <div className="swipe-buttons">
+              <button
+                className="swipe-left"
+                onClick={() => handleSwipe("izquierda")}
+              >
+                ❌
+              </button>
+              <button
+                className="swipe-right"
+                onClick={() => handleSwipe("derecha")}
+              >
+                ❤️
+              </button>
+            </div>
           </div>
-          <div className="buttons">
-            <button
-              onClick={() => handleSwipe(card.id, "left")}
-              className="dislike-btn"
-            >
-              ❌
-            </button>
-            <button
-              onClick={() => handleSwipe(card.id, "right")}
-              className="like-btn"
-            >
-              ❤️
-            </button>
-          </div>
-        </div>
-      ))}
-      {cards.length === 0 && <div>No hay más tarjetas</div>}
-    </div>
+        )}
+      </div>
+    </section>
   );
 }
 
